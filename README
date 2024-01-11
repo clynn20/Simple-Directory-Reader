@@ -1,0 +1,30 @@
+This is a simple directory reader program.
+The program will read the directory entries. Finds a file in the current directory based on user specified criteria.
+Reads and processes the data in the chosen file. Then creates a new directory, within this newly created directory, the program will create several text files and writes processed data to those files.
+
+The directory reader program starts and presents two choices to the user:
+1. Select the file to process.
+2. Exit the program.
+
+If user picks option 1, they are presented with 3 further choices about which file to process:
+1. Enter 1 to pick the largest file.
+2. Enter 2 to pick the smallest file.
+3. Enter 3 to specify the name of a file.
+
+    If user picks choice 1, the directory reader program will find the largest file with the prefix movies_ and the extension csv in the current directory and automatically process that file.
+
+    If user picks choice 2, the directory reader program will find the smallest file with the prefix movies_ and the extension csv in the current directory and automatically process that file.
+
+    If user picks choice 3, the the directory reader program will ask user to provide file name and automatically process that file.
+
+    Whenever the program processes a file, it will:
+    1. Create a new directory and print a message with the name of the directory that has been created. The newly created directory will be name myfile.movies.random, where random is the random number between 0 and 99999
+    2. Parse data in the chosen file to find out the movies released in each year.
+    3. In the newly created directory, create one file for each year in which at least one movie was released. The file will be named YYYY.txt, where YYYY is the 4 digit integer value for the year.
+    4. Within the file for a year, write the titles of all movies released in that year, one on each line.
+
+Otherwise, if user picks option 2, the program will end.
+
+Use command make to compile the program
+Use the below command to run the program
+    ./reader
